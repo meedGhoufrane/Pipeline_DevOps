@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18  # Adjust based on your Node.js version
+    commands:
+      - echo Installing dependencies...
+      - npm install
+
+  build:
+    commands:
+      - echo Running all tests...
+      - npm run test  # Runs unit tests
+      - npm run test:e2e  # Runs end-to-end tests (if applicable)
+      - npm run lint  # Optional: Runs linting checks
+
+reports:
+  jest_reports:
+    files:
+      - "coverage/**"  # Adjust if using Jest with coverage
+      - "test-results.xml"  # If using a test reporter
+    base-directory: .  
+    discard-paths: no
+
+cache:
+  paths:
+    - node_modules/**/*
