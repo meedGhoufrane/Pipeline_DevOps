@@ -12,9 +12,6 @@ phases:
     commands:
       - echo Building the NestJS application...
       - npm run build
-
-  test:
-    commands:
       - echo Running tests...
       - npm run test
 
