@@ -22,4 +22,4 @@ import { PharmaciesModule } from './pharmacies/pharmacies.module';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule {}   
